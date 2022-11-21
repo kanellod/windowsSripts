@@ -18,6 +18,7 @@ SET /P input=Please enter a value:
 if %input% == 0 CALL :busyCTRL
 if %input% == 1 CALL :triggerPCStats
 if %input% == 2 CALL :triggerNumLock
+if %input% == 3 CALL :checkDiskStatusHealth
 if %input% == 9 EXIT
 EXIT /B 0
 
@@ -28,7 +29,7 @@ echo Choose from the following options:
 echo [0] keep windows busy with CTRL button
 echo [1] PC stats
 echo [2] numLockTrigger
-echo [3] _empty
+echo [3] checkDiskStatusHealth
 echo [9] terminate
 EXIT /B 0
 
@@ -42,4 +43,8 @@ EXIT /B 0
 
 :triggerNumLock
 START CALL triggerNumLock.bat
+EXIT /B 0
+
+:checkDiskStatusHealth
+START CALL checkDiskHealthAndStatus.bat
 EXIT /B 0
