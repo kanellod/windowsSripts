@@ -1,0 +1,1 @@
+wmic process get ProcessID,ExecutablePath

@@ -1,0 +1,1 @@
+wmic process where ExecutablePath='C:\\windows\\system32\\notepad.exe' get ProcessId

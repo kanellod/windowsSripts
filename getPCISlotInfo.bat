@@ -1,0 +1,1 @@
+wmic systemslot get slotdesignation,currentusage,description,status
